@@ -1,1 +1,2740 @@
-
+{
+  "_meta": {
+    "sources": [
+      {
+        "json": "Thermodome",
+        "abbreviation": "TDM",
+        "full": "Thermodome",
+        "url": "",
+        "authors": [],
+        "convertedBy": []
+      }
+    ]
+  },
+  "monster": [
+    {
+      "name": "Clawed Glabrezu",
+      "source": "Thermodome",
+      "size": ["L"],
+      "type": {
+        "type": "fiend",
+        "tags": ["demon"]
+      },
+      "alignment": ["C", "E"],
+      "ac": [
+        {
+          "ac": 17,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 157,
+        "formula": "15d10 + 75"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 20,
+      "dex": 15,
+      "con": 21,
+      "int": 19,
+      "wis": 17,
+      "cha": 16,
+      "save": {
+        "str": "+9",
+        "con": "+9",
+        "wis": "+7",
+        "cha": "+7"
+      },
+      "senses": ["truesight 120 ft."],
+      "passive": 13,
+      "resist": [
+        "cold",
+        "fire",
+        "lightning",
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks",
+          "cond": true
+        }
+      ],
+      "immune": ["poison"],
+      "conditionImmune": ["poisoned"],
+      "languages": ["Abyssal", "telepathy 120 ft."],
+      "cr": "9",
+      "spellcasting": [
+        {
+          "name": "Innate Spellcasting",
+          "headerEntries": [
+            "The glabrezu's spellcasting ability is Intelligence (spell save {@dc 16}). The glabrezu can innately cast the following spells, requiring no material components:"
+          ],
+          "will": [
+            "{@spell darkness}",
+            "{@spell detect magic}",
+            "{@spell dispel magic}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell confusion}",
+              "{@spell fly}",
+              "{@spell power word stun}"
+            ]
+          },
+          "ability": "int",
+          "type": "spellcasting"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The glabrezu has advantage on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The glabrezu makes four attacks: two with its pincers and two with its fists. Alternatively, it makes two attacks with its pincers and casts one spell."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}16 ({@damage 2d10 + 5}) Slashing damage. If the target is a Medium or smaller creature, it is {@condition grappled} (escape {@dc 15}). The Gabrezu has two claws, each of which can grapple only one target."
+          ]
+        },
+        {
+          "name": "Fist",
+          "entries": [
+            "{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d4 + 2}) bludgeoning damage."
+          ]
+        }
+      ],
+      "variant": [
+        {
+          "type": "variant",
+          "name": "Summon Demon (1/Day)",
+          "entries": [
+            "The demon chooses what to summon and attempts a magical summoning.",
+            "A glabrezu has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 1d3} {@creature vrock||vrocks}, {@dice 1d2} {@creature hezrou||hezrous}, or one glabrezu.",
+            "A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+          ]
+        }
+      ],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/glabrezu.mp3"
+      },
+      "traitTags": ["Magic Resistance"],
+      "senseTags": ["U"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["AB", "TP"],
+      "spellcastingTags": ["I"],
+      "miscTags": ["MW", "RCH"],
+      "conditionInflict": ["grappled"],
+      "conditionInflictSpell": ["stunned"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Glabrezu.png",
+      "fluff": {
+        "name": "Glabrezu",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "A glabrezu takes great pleasure in destroying mortals through temptation, and these creatures are among the few demons to offer their service to creatures foolish enough to summon them.",
+                  "Although glabrezus are devastating in combat, they prefer to tempt victims into ruin, using power or wealth as a lure. Engaging in guile, trickery, and evil bargains, a glabrezu hoards riches that it uses to fulfill promises to shortsighted summoners and weak-willed mortals. However, if its attempts to entice or deceive fail, a glabrezu has the strength to fight and win."
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "name": "Demons",
+            "entries": [
+              "Spawned in the Infinite Layers of the Abyss, demons are the embodiment of chaos and evil-engines of destruction barely contained in monstrous form. Possessing no compassion, empathy, or mercy, they exist only to destroy.",
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Spawn of Chaos",
+                        "entries": [
+                          "The Abyss creates demons as extensions of itself, spontaneously forming fiends out of filth and carnage. Some are unique monstrosities, while others represent uniform strains virtually identical to each other. Other demons (such as manes) are created from mortal souls shunned or cursed by the gods, or which are otherwise trapped in the Abyss."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Capricious Elevation",
+                        "entries": [
+                          "Demons respect power and power alone. A greater demon commands shrieking mobs of lesser demons because it can destroy any lesser demon that dares to refuse its commands. A demon's status grows with the blood it spills; the more enemies that fall before it, the greater it becomes.",
+                          "A demon might spawn as a manes, then become a dretch, and eventually transform to a vrock after untold time spent fighting and surviving in the Abyss. Such elevations are rare, however, for most demons are destroyed before they attain significant power. The greatest of those that do survive make up the ranks of the demon lords that threaten to tear the Abyss apart with their endless warring.",
+                          "By expending considerable magical power, demon lords can raise lesser demons into greater forms, though such promotions never stem from a demon's deeds or accomplishments. Rather, a demon lord might warp a manes into a quasit when it needs an invisible spy, or turn an army of dretches into hezrous when marching against a rival lord. Demon lords only rarely elevate demons to the highest ranks, fearful of inadvertently creating rivals to their own power."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Abyssal Invasions",
+                        "entries": [
+                          "Wherever they wander across the Abyss, demons search for portals to the other planes. They crave the chance to slip free of their native realm and spread their dark influence across the multiverse, undoing the works of the gods, tearing down civilizations, and reducing the cosmos to despair and ruin.",
+                          "Some of the darkest legends of the mortal realm are built around the destruction wrought by demons set loose in the world. As such, even nations embroiled in bitter conflict will set their differences aside to help contain an outbreak of demons, or to seal off abyssal breaches before these fiends can break free."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Signs of Corruption",
+                        "entries": [
+                          "Demons carry the stain of abyssal corruption with them, and their mere presence changes the world for the worse. Plants wither and die in areas where abyssal breaches and demons appear. Animals shun the sites where a demon has made a kill. The site of a demonic infestation might be fouled by a stench that never abates, by areas of bitter cold or burning heat, or by permanent shadows that mark the places where these fiends lingered."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Eternal Evil",
+                        "entries": [
+                          "Outside the Abyss, death is a minor nuisance that no demon fears. Mundane weapons can't stop these fiends, and many demons are resistant to the energy of the most potent spells. When a lucky hero manages to drop a demon in combat, the fiend dissolves into foul ichor. It then instantly reforms in the Abyss, its mind and essence intact even as its hatred is inflamed.",
+                          "The only way to truly destroy a demon is to seek it in the Abyss and kill it there."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Protected Essence",
+                        "entries": [
+                          "A powerful demon can take steps to safeguard its life essence, using secret methods and abyssal metals to create an amulet into which part of that essence is ceded. If the demon's abyssal form is ever destroyed, the amulet allows the fiend to reform at a time and place of its choosing.",
+                          "Obtaining a demonic amulet is a dangerous enterprise, and simply seeking such a device risks drawing the attention of the demon that created it. A creature possessing a demonic amulet can exact favors from the demon whose life essence the amulet holds—or inflict great pain if the fiend resists. If an amulet is destroyed, the demon that created it is trapped in the Abyss for a year and a day."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Demonic Cults",
+                        "entries": [
+                          "Despite the dark risks involved in dealing with fiends, the mortal realm is filled with creatures that covet demonic power. Demon lords manipulate these mortal servants into performing ever greater acts of depravity, furthering the demon lord's ambitions in exchange for magic and other boons. However, a demon regards any mortals in its service as tools to use and then discard at its whim, consigning their mortal souls to the Abyss."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Demon Summoning",
+                        "entries": [
+                          "Few acts are as dangerous as summoning a demon, and even mages who bargain freely with devils fear the fiends of the Abyss. Though demons yearn to sow chaos on the Material Plane, they show no gratitude when brought there, raging against their prisons and demanding release.",
+                          "Those who would risk summoning a demon might do so to wrest information from it, press it into service, or send it on a mission that only a creature of absolute evil can complete. Preparation is key, and experienced summoners know the specific spells and magic items that can force a demon to bend to another's will. If a single mistake is made, a demon that breaks free shows no mercy as it makes its summoner the first victim of its wrath."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Bound Demons",
+                        "entries": [
+                          "The Book of Vile Darkness, the Black Scrolls of Ahm, and the Demonomicon of Iggwilv are the foremost authorities on demonic matters. These ancient tomes describe techniques that can trap the essence of a demon on the Material Plane, placing it within a weapon, idol, or piece of jewelry and preventing the fiend's return to the Abyss.",
+                          "An object that binds a demon must be specially prepared with unholy incantations and innocent blood. It radiates a palpable evil, chilling and fouling the air around it. A creature that handles such an object experiences unsettling dreams and wicked impulses, but is able to control the demon whose essence is trapped within the object. Destroying the object frees the demon, which immediately seeks revenge against its binder."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Demonic Possession",
+                        "entries": [
+                          "No matter how secure its bindings, a powerful demon often finds a way to escape an object that holds it. When a demonic essence emerges from its container, it can possess a mortal host. Sometimes a fiend employs stealth to hide a successful possession. Other times, it unleashes the full brunt of its fiendish drives through its new form.",
+                          "As long as the demon remains in possession of its host, the soul of that host is in danger of being dragged to the Abyss with the demon if it is exorcised from the flesh, or if the host dies. If a demon possesses a creature and the object binding the demon is destroyed, the possession lasts until powerful magic is used to drive the demonic spirit out of its host."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Demon Lords",
+                "entries": [
+                  "The chaotic power of the Abyss rewards demons of particular ruthlessness and ingenuity with a dark blessing, transforming them into unique fiends whose power can rival the gods. These demon lords rule through cunning or brute force, hoping to one day claim the prize of absolute control over all the Abyss.",
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Reward for Outsiders",
+                        "entries": [
+                          "Although most demon lords rise up from the vast and uncountable mobs of demons rampaging across the Abyss, the plane also rewards outsiders that conquer any of its infinite layers. The elven goddess Lolth became a demon lord after Corellon Larethian cast her into the Abyss for betraying elvenkind. Sages claim that the Dark Prince Graz'zt originated on some other plane before stealing his abyssal title from another long-forgotten demon lord."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Power and Control",
+                        "entries": [
+                          "The greatest sign of a demon lord's power is its ability to reshape an abyssal realm. A layer of the Abyss controlled by a demon lord becomes a twisted reflection of that fiend's vile personality, and demon lords seldom leave their realms for fear of allowing another creature to reshape and seize it.",
+                          "As with other demons, a demon lord that dies on another plane has its essence return to the Abyss, where it reforms into a new body. Likewise, a demon lord that dies in the Abyss is permanently destroyed. Most demon lords keep a portion of their essence safely stored away to prevent such a fate."
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Baphomet",
+                    "entries": [
+                      "The demon lord Baphomet, also known as the Horned King and the Prince of Beasts, rules over minotaurs and other savage creatures. If he had his way, civilization would crumble and all races would embrace their base animal savagery.",
+                      "The Prince of Beasts appears as a huge, black-furred minotaur with iron horns, red eyes, and a blood-soaked mouth. His iron crown is topped with the rotting heads of his enemies, while his dark armor is set with spikes and skull-like serrations. He carries a huge glaive named Heartcleaver, but often hurls it into the fray so as to face his enemies with horns and hooves."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Demogorgon",
+                    "entries": [
+                      "The Sibilant Beast and the self-styled Prince of Demons, Demogorgon yearns for nothing less than undoing the order of the multiverse. An insane assemblage of features and drives, the Prince of Demons inspires fear and hatred among other demons and demon lords.",
+                      "Demogorgon towers three times the height of a human, his body as sinuous as a snake's and as powerful as a great ape's. Suckered tentacles take the place of his arms. His saurian lower torso ends in webbed and clawed feet, and a forked tail whose whip-like tips are armed with cruel blades. The Prince of Demons has two baleful baboon heads, both of them mad. It is only the conflict between the two halves of his dual nature that keeps the demon lord's ambitions in check."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Graz'zt",
+                    "entries": [
+                      "The demon lord Graz'zt appears as a darkly handsome figure nearly nine feet tall. Those who refer to the Dark Prince as the most humanoid of the demon lords vastly underestimate the capacity for evil in his scheming heart.",
+                      "Graz'zt is a striking physical specimen, whose demonic nature shows in his ebon skin, pointed ears, yellow fangs, crown of horns, and six-fingered hands. He delights in finery, pageantry, and sating his decadent desires with subjects and consorts alike, among whom incubi and succubi are often his favorites."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Juiblex",
+                    "entries": [
+                      "The demon lord of slimes and oozes, Juiblex is a stew of noxious fluids that lurks in the abyssal depths. The wretched Faceless Lord cares nothing for cultists or mortal servants, and its sole desire is to turn all creatures into formless copies of its horrid self.",
+                      "In its resting state, Juiblex spreads out in a noxious mass, bubbling and filling the air with a profound stench. On the rare occasions when creatures confront the demon lord, Juiblex draws itself up into a shuddering cone of slime striated with veins of black and green. Baleful red eyes swim within its gelatinous body, while dripping pseudopods of ooze lash out hungrily at any creature they can reach."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Lolth",
+                    "entries": [
+                      "The Demon Queen of Spiders is the evil matron of the drow. Her every thought is touched by malice, and the depth of her viciousness can surprise even her most faithful priestesses. She directs her faithful while she weaves plots across the worlds of the Material Plane, looking forward to the time when her drow followers bring those worlds under her control.",
+                      "Lolth appears as a lithe, imperious drow matriarch when she manifests to her followers in the mortal realm, which she does with unusual frequency. When battle breaks out-or if she has a reason to remind her followers to fear her—Lolth's lower body transforms into that of a huge demonic spider, whose spike—tipped legs and mandibles tear foes apart."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Orcus",
+                    "entries": [
+                      "Known as the Demon Prince of Undeath and the Blood Lord, the demon lord Orcus is worshiped by the undead and by living creatures that channel the power of undeath. A brooding and nihilistic entity, Orcus yearns to make the multiverse a place of death and darkness, forever unchanging except by his will.",
+                      "The Demon Prince of Undeath is a foul and corpulent creature, with a humanoid torso, powerful goat legs, and the desiccated head of a ram. His sore-ridden body stinks of disease, but his decaying head and glowing red eyes are as a creature already dead. Great black bat wings sprout from his back, stirring reeking air as he moves.",
+                      "Orcus wields a malevolent artifact known as the Wand of Orcus, a mace-like rod of obsidian topped by a humanoid skull. He surrounds himself with undead, and living creatures not under his control are anathema to him."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Yeenoghu",
+                    "entries": [
+                      "Known as the Gnoll Lord and the Beast of Butchery, the demon lord Yeenoghu hungers for slaughter and senseless destruction. Gnolls are his mortal instruments, and he drives them to ever-greater atrocities in his name. Delighting in sorrow and hopelessness, the Gnoll Lord yearns to turn the world into a wasteland in which the last surviving gnolls tear each other apart for the right to feast upon the dead.",
+                      "Yeenoghu appears as a huge, scarred gnoll with a spiky crest of black spines, and eyes that burn with emerald flame. His armor is a patchwork of shields and breastplates claimed from fallen foes, and decorated by those foes' flayed skins. Yeenoghu can summon a triple flail he calls the Butcher, which he wields to deadly effect or wills to fly independently into battle as he tears foes apart with teeth and claws."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Other Demon Lords",
+                    "entries": [
+                      "No one knows the full number of demon lords that rage in the Abyss. Given the infinite depths of that plane, powerful demons constantly rise to become demon lords, then fall almost as quickly. Among the demon lords whose power has endured long enough for demonologists to name them are Fraz-Urb'luu, the Prince of Deception; Kostchtchie, the Prince of Wrath; Pazuzu, Prince of the Lower Aerial Kingdoms; and Zuggtmoy, Lady of Fungi."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "Demon Types",
+                    "entries": [
+                      "Demonologists organize the chaotic distribution of demons into broad categories of power known as types. Most demons fit into one of six major types, with the weakest categorized as Type 1 and the strongest as Type 6. Demons outside the six main types are categorized as minor demons and demon lords."
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "caption": "Demons by Type",
+                    "colLabels": ["Type", "Examples"],
+                    "colStyles": ["col-2 text-center", "col-10"],
+                    "rows": [
+                      ["1", "barlgura, shadow demon, vrock"],
+                      ["2", "chasme, hezrou"],
+                      ["3", "glabrezu, yochlol"],
+                      ["4", "nalfeshnee"],
+                      ["5", "marilith"],
+                      ["6", "balor, goristro"]
+                    ]
+                  },
+                  {
+                    "type": "inset",
+                    "name": "Demon True Names",
+                    "entries": [
+                      "Though demons all have common names, every demon lord and every demon of type 1 through 6 has a true name that it keeps secret. A demon can be forced to disclose its true name if {@condition charmed}, and ancient scrolls and tomes are said to exist that list the true names of the most powerful demons.",
+                      "A mortal who learns a demon's true name can use powerful summoning magic to call the demon from the Abyss and exercise some measure of control over it. However, most demons brought to the Material Plane in this manner do everything in their power to wreak havoc or sow discord and strife."
+                    ]
+                  },
+                  {
+                    "type": "inset",
+                    "name": "Variant: Demon Summoning",
+                    "entries": [
+                      "Some demons can have an action option that allows them to summon other demons. Summon Demon (1/Day). The demon chooses what to summon and attempts a magical summoning.",
+                      {
+                        "type": "list",
+                        "items": [
+                          "A balor has a {@chance 50|50 percent} chance of summoning {@dice 1d8} vrocks, {@dice 1d6} hezrous, {@dice 1d4} glabrezus, {@dice 1d3} nalfeshnees, {@dice 1d2} mariliths, or one goristro.",
+                          "A barlgura has a {@chance 30|30 percent} chance of summoning one barlgura.",
+                          "A chasme has a {@chance 30|30 percent} chance of summoning one chasme.",
+                          "A glabrezu has a {@chance 30|30 percent} chance of summoning {@dice 1d3} vrocks, {@dice 1d2} hezrous, or one glabrezu.",
+                          "A hezrou has a {@chance 30|30 percent} chance of summoning {@dice 2d6} dretches or one hezrou.",
+                          "A marilith has a {@chance 50|50 percent} chance of summoning {@dice 1d6} vrocks, {@dice 1d4} hezrous, {@dice 1d3} glabrezus, {@dice 1d2} nalfeshnees, or one marilith.",
+                          "A nalfeshnee has a {@chance 50|50 percent} chance of summoning {@dice 1d4} vrocks, {@dice 1d3} hezrous, {@dice 1d2} glabrezus, or one nalfeshnee.",
+                          "A vrock has a {@chance 30|30 percent} chance of summoning {@dice 2d4} dretches or one vrock.",
+                          "A yochlol has a {@chance 50|50 percent} chance of summoning one yochlol."
+                        ]
+                      },
+                      "A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "insetReadaloud",
+                "entries": [
+                  {
+                    "type": "quote",
+                    "entries": [
+                      "Demons are painfully difficult to summon and control. It is not a burden for the weak of heart or the weak of spirit."
+                    ],
+                    "by": "From the {@style Demonomicon of Iggwilv|small-caps}"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Glabrezu.jpg"
+            }
+          }
+        ]
+      },
+      "damageTags": ["B"],
+      "savingThrowForcedSpell": ["constitution", "wisdom"]
+    },
+    {
+      "name": "Increased Threat Winged Kobold",
+      "source": "Thermodome",
+      "page": 1,
+      "size": ["S"],
+      "type": {
+        "type": "humanoid",
+        "tags": ["kobold"]
+      },
+      "alignment": ["L", "E"],
+      "ac": [16],
+      "hp": {
+        "formula": "7d6",
+        "average": 24
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "str": 7,
+      "dex": 18,
+      "con": 9,
+      "int": 12,
+      "wis": 14,
+      "cha": 16,
+      "senses": ["darkvision 60 ft."],
+      "passive": 12,
+      "languages": ["Common", "Draconic"],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+          ]
+        },
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "coastal",
+        "desert",
+        "forest",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/winged-kobold.mp3"
+      },
+      "traitTags": ["Pack Tactics", "Sunlight Sensitivity"],
+      "senseTags": ["D"],
+      "languageTags": ["C", "DR"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Winged Kobold.png",
+      "fluff": {
+        "name": "Winged Kobold",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Kobolds are craven reptilian humanoids that worship evil dragons as demigods and serve them as minions and toadies. Kobolds inhabit dragons' lairs when they can but more commonly infest dungeons, gathering treasures and trinkets to add to their own tiny hoards.",
+                  {
+                    "name": "Strength in Numbers",
+                    "entries": [
+                      "Kobolds are egg-laying creatures. They mature quickly and can live to be \"great wyrms\" more than a century old. However, many kobolds perish before they reach the end of their first decade. Physically weak, they are easy prey for predators. This vulnerability forces them to band together. Their superior numbers can win battles against powerful adversaries, but often with massive casualties on the kobold side."
+                    ],
+                    "type": "entries"
+                  },
+                  {
+                    "name": "Tunnelers and Builders",
+                    "type": "entries",
+                    "entries": [
+                      "Kobolds make up for their physical ineptitude with a cleverness for trap making and tunneling. Their lairs consist of low tunnels through which they move easily but which hinder larger humanoids. Kobolds also riddle their lairs with traps. The most insidious kobold traps make use of natural hazards and other creatures. A trip wire might connect to a spring-loaded trap that hurls clay pots of flesh-eating green slime or flings crates of venomous giant centipedes at intruders."
+                    ]
+                  },
+                  {
+                    "name": "The Lost God",
+                    "type": "entries",
+                    "entries": [
+                      "In addition to the dragons they revere, kobolds worship a lesser god named Kurtulmak. Legends speak of how Kurtulmak served as Tiamat's vassal in the Nine Hells until Garl Glittergold, the god of gnomes, stole a trinket from the Dragon Queen's hoard. Tiamat sent Kurtulmak to retrieve the trinket, but Garl Glittergold played a trick on him, collapsing the earth and trapping the kobold god in an underground maze for eternity. For this reason, kobolds hate gnomes and pranks of any kind. Kurtulmak's most devoted worshipers dedicate themselves to finding and releasing their lost god from his prison-maze."
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Kobold.jpg"
+            }
+          }
+        ]
+      },
+      "resist": ["fire", "poison"],
+      "attachedItems": ["shortbow|phb"],
+      "action": [
+        {
+          "name": "Obsidian Shortsword",
+          "entries": [
+            "{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 6}) piercing damage."
+          ]
+        },
+        {
+          "name": "Shortbow",
+          "entries": [
+            "{@atk rw} {@hit +6} to hit, range 80/320 ft., one target. {@h}7 ({@damage 1d6 + 6}) piercing damage."
+          ]
+        }
+      ],
+      "miscTags": ["MW", "MLW", "RW"],
+      "damageTags": ["P"]
+    },
+    {
+      "name": "Danger Wight",
+      "source": "Thermodome",
+      "page": 300,
+      "basicRules": true,
+      "size": ["M"],
+      "type": "undead",
+      "alignment": ["N", "E"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": ["{@item scale mail|phb}"]
+        }
+      ],
+      "hp": {
+        "formula": "9d8 + 27",
+        "average": 67
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 16,
+      "int": 10,
+      "wis": 13,
+      "cha": 15,
+      "skill": {
+        "stealth": "+6",
+        "athletics": "+8",
+        "perception": "+5"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 15,
+      "resist": [
+        "necrotic",
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks that aren't silvered",
+          "cond": true
+        }
+      ],
+      "immune": ["poison"],
+      "conditionImmune": ["exhaustion", "poisoned"],
+      "languages": ["the languages it knew in life"],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The wight makes two longsword attacks or two longbow attacks. It can use its Life Drain in place of one longsword attack."
+          ]
+        },
+        {
+          "name": "Life Drain",
+          "entries": [
+            "{@atk mw} {@hit 8} to hit, reach 5 ft., one creature. {@h}5 ({@damage 2d6 + 4}) necrotic damage. The target must succeed on a {@dc 16} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+            "A humanoid slain by this attack rises 24 hours later as a {@creature zombie} under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time."
+          ]
+        },
+        {
+          "name": "Longsword",
+          "entries": [
+            "{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 4}) slashing damage, or 7 ({@damage 1d10 + 4}) slashing damage if used with two hands."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atk rw} {@hit 6} to hit, range 150/600 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+          ]
+        }
+      ],
+      "environment": ["desert", "swamp", "underdark", "urban"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/wight.mp3"
+      },
+      "traitTags": ["Sunlight Sensitivity"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["LF"],
+      "damageTags": ["N", "P", "S"],
+      "miscTags": ["MW", "HPR", "RW", "RNG"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Wight.png",
+      "fluff": {
+        "name": "Wight",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "The word \"wight\" meant \"person\" in days of yore, but the name now refers to evil undead who were once mortals driven by dark desire and great vanity. When death stills such a creature's heart and snuffs its living breath, its spirit cries out to the demon lord Orcus or some vile god of the underworld for a reprieve: undeath in return for eternal war on the living. If a dark power answers the call, the spirit is granted undeath so that it can pursue its own malevolent agenda.",
+                  "Wights possess the memories and drives of their formerly living selves. They will heed the call of whatever dark entity transformed them into undead, swearing oaths to appease their new lord while retaining their autonomy. Never tiring, a wight can pursue its goals relentlessly and without distraction.",
+                  {
+                    "name": "Life Eaters",
+                    "type": "entries",
+                    "entries": [
+                      "Neither dead nor alive, a wight exists in a transitional state between one world and the next. The bright spark it possessed in life is gone, and in its place is a yearning to consume that spark in all living things.",
+                      "When a wight attacks, this life essence glows like white-hot embers to its dark eyes, and the wight's cold touch can drain the spark through flesh, clothing, and armor."
+                    ]
+                  },
+                  {
+                    "name": "Shadow of the Grave",
+                    "type": "entries",
+                    "entries": [
+                      "Wights flee from the world by day, away from the light of the sun, which they hate. They retreat to barrow mounds, crypts, and tombs where they dwell. Their lairs are silent, desolate places, surrounded by dead plants, noticeably blackened, and avoided by bird and beast.",
+                      "Humanoids slain by a wight can rise as zombies under its control. Motivated by hunger for living souls and driven by the same desire for power that awakened them in undeath, some wights serve as shock troops for evil leaders, including wraiths. As soldiers, they are able to plan but seldom do so, relying on their hunger for destruction to overwhelm any creature that stands before them."
+                    ]
+                  },
+                  {
+                    "name": "Undead Nature",
+                    "type": "entries",
+                    "entries": [
+                      "A wight doesn't require air, food, drink, or sleep."
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Wight.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vampire Spellcaster",
+      "source": "Thermodome",
+      "page": 298,
+      "size": ["M"],
+      "type": {
+        "type": "undead",
+        "tags": ["shapechanger"]
+      },
+      "alignment": ["L", "E"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 144,
+        "formula": "17d8 + 68"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 18,
+      "con": 18,
+      "int": 17,
+      "wis": 15,
+      "cha": 18,
+      "save": {
+        "dex": "+9",
+        "wis": "+7",
+        "cha": "+9"
+      },
+      "skill": {
+        "perception": "+7",
+        "stealth": "+9"
+      },
+      "senses": ["darkvision 120 ft."],
+      "passive": 17,
+      "resist": [
+        "necrotic",
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks",
+          "cond": true
+        }
+      ],
+      "languages": ["the languages it knew in life"],
+      "cr": "15",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "headerEntries": [
+            "The vampire is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 16}, {@hit 8} to hit with spell attacks). The vampire has the following wizard spells prepared:"
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell mage hand}",
+                "{@spell prestidigitation}",
+                "{@spell ray of frost}"
+              ]
+            },
+            "1": {
+              "spells": [
+                "{@spell comprehend languages}",
+                "{@spell fog cloud}",
+                "{@spell sleep}"
+              ],
+              "slots": 4
+            },
+            "2": {
+              "spells": [
+                "{@spell detect thoughts}",
+                "{@spell gust of wind}",
+                "{@spell mirror image}"
+              ],
+              "slots": 3
+            },
+            "3": {
+              "spells": [
+                "{@spell bestow curse}",
+                "{@spell counterspell}",
+                "{@spell Melf's minute meteors|XGE}"
+              ],
+              "slots": 3
+            },
+            "4": {
+              "spells": ["{@spell blight}", "{@spell greater invisibility}"],
+              "slots": 3
+            },
+            "5": {
+              "spells": ["{@spell cloudkill}", "{@spell dominate person}"],
+              "slots": 1
+            }
+          },
+          "ability": "int",
+          "type": "spellcasting"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Shapechanger",
+          "entries": [
+            "If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+            "While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+            "While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+          ]
+        },
+        {
+          "name": "Legendary Resistance (3/Day)",
+          "entries": [
+            "If the vampire fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Misty Escape",
+          "entries": [
+            "When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling {@condition unconscious}, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.",
+            "While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then {@condition paralyzed} until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point."
+          ]
+        },
+        {
+          "name": "Regeneration",
+          "entries": [
+            "The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
+          ]
+        },
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Vampire Weaknesses",
+          "entries": [
+            "The vampire has the following flaws:",
+            "{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
+            "{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
+            "{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition incapacitated} in its resting place, the vampire is {@condition paralyzed} until the stake is removed.",
+            "{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack (Vampire Form Only)",
+          "entries": [
+            "The vampire makes two attacks, only one of which can be a bite attack."
+          ]
+        },
+        {
+          "name": "Unarmed Strike (Vampire Form Only)",
+          "entries": [
+            "{@atk mw} {@hit 9} to hit, reach 5 ft., one creature. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage. Instead of dealing damage, the vampire can grapple the target (escape {@dc 18})."
+          ]
+        },
+        {
+          "name": "Bite (Bat or Vampire Form Only)",
+          "entries": [
+            "{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition grappled} by the vampire, {@condition incapacitated}, or {@condition restrained}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a {@creature vampire spawn} under the vampire's control."
+          ]
+        },
+        {
+          "name": "Charm",
+          "entries": [
+            "The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a {@dc 17} Wisdom saving throw against this magic or be {@condition charmed} by the vampire. The {@condition charmed} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
+            "Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
+          ]
+        },
+        {
+          "name": "Children of the Night (1/Day)",
+          "entries": [
+            "The vampire magically calls {@dice 2d4} swarms of {@creature swarm of bats||bats} or {@creature swarm of rats||rats}, provided that the sun isn't up. While outdoors, the vampire can call {@dice 3d6} {@creature wolf||wolves} instead. The called creatures arrive in {@dice 1d4} rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action."
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Move",
+          "entries": [
+            "The vampire moves up to its speed without provoking opportunity attacks."
+          ]
+        },
+        {
+          "name": "Unarmed Strike",
+          "entries": ["The vampire makes one unarmed strike."]
+        },
+        {
+          "name": "Bite (Costs 2 Actions)",
+          "entries": ["The vampire makes one bite attack."]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Vampire",
+        "source": "MM"
+      },
+      "environment": ["urban"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/vampire-spellcaster.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances",
+        "Regeneration",
+        "Shapechanger",
+        "Spider Climb",
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": ["SD"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["LF"],
+      "damageTags": ["B", "N", "P"],
+      "damageTagsSpell": ["C", "F", "I", "N"],
+      "spellcastingTags": ["CW"],
+      "miscTags": ["MW", "HPR"],
+      "conditionInflict": ["charmed"],
+      "conditionInflictSpell": ["charmed", "invisible", "unconscious"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Vampire Spellcaster.png",
+      "fluff": {
+        "name": "Vampire Spellcaster",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Awakened to an endless night, vampires hunger for the life they have lost and sate that hunger by drinking the blood of the living. Vampires abhor sunlight, for its touch burns them. They never cast shadows or reflections, and any vampire wishing to move unnoticed among the living keeps to the darkness and far from reflective surfaces.",
+                  {
+                    "name": "Dark Desires",
+                    "type": "entries",
+                    "entries": [
+                      "Whether or not a vampire retains any memories from its former life, its emotional attachments wither as once-pure feelings become twisted by undeath. Love turns into hungry obsession, while friendship becomes bitter jealousy. In place of emotion, vampires pursue physical symbols of what they crave, so that a vampire seeking love might fixate on a young beauty. A child might become an object of fascination for a vampire obsessed with youth and potential. Others surround themselves with art, books, or sinister items such as torture devices or trophies from creatures they have killed."
+                    ]
+                  },
+                  {
+                    "name": "Born from Death",
+                    "type": "entries",
+                    "entries": [
+                      "Most of a vampire's victims become vampire spawn-ravenous creatures with a vampire's hunger for blood, but under the control of the vampire that created them. If a true vampire allows a spawn to draw blood from its own body, the spawn transforms into a true vampire no longer under its master's control. Few vampires are willing to relinquish their control in this manner. Vampire spawn become free-willed when their creator dies."
+                    ]
+                  },
+                  {
+                    "name": "Chained to the Grave",
+                    "type": "entries",
+                    "entries": [
+                      "Every vampire remains bound to its coffin, crypt, or grave site, where it must rest by day. If a vampire didn't receive a formal burial, it must lie beneath a foot of earth at the place of its transition to undeath. A vampire can move its place of burial by transporting its coffin or a significant amount of grave dirt to another location. Some vampires set up multiple resting places this way."
+                    ]
+                  },
+                  {
+                    "name": "Undead Nature",
+                    "type": "entries",
+                    "entries": [
+                      "Neither a vampire nor a vampire spawn requires air."
+                    ]
+                  },
+                  {
+                    "type": "entries",
+                    "name": "A Vampire's Lair",
+                    "entries": [
+                      "A vampire chooses a grand yet defensible location for its lair, such as a castle, fortified manor, or walled abbey. It hides its coffin in an underground crypt or vault guarded by vampire spawn or other loyal creatures of the night."
+                    ]
+                  },
+                  {
+                    "type": "inset",
+                    "name": "Player Characters as Vampires",
+                    "entries": [
+                      "The game statistics of a player character transformed into a vampire spawn and then a vampire don't change, except that the character's Strength, Dexterity, and Constitution scores become 18 if they aren't higher. In addition, the character gains the vampire's damage resistances, {@sense darkvision}, traits, and actions. Attack and damage rolls for the vampire's attacks are based on Strength.",
+                      "The save DC for Charm is 8 + the vampire's proficiency bonus + the vampire's Charisma modifier. The character's alignment becomes lawful evil, and the DM might take control of the character until the vampirism is reversed with a {@spell wish} spell or the character is killed and brought back to life."
+                    ]
+                  },
+                  {
+                    "type": "inset",
+                    "name": "Strahd von Zarovich",
+                    "entries": [
+                      "A brilliant thinker and capable warrior in life, Strahd von Zarovich fought in countless battles for his people. When war and killing finally stripped him of his youth and strength, he settled in the remote valley of Barovia and built a castle on a towering pinnacle, from which he could survey his lands. His brother Sergei came to live with him in Castle Ravenloft, becoming Strahd's adviser and constant companion.",
+                      "In his brother, Strahd saw everything he had lost. Sergei was handsome and young, while Strahd had become old and scarred. Resentment colored their relationship, eventually turning into hatred. Strahd's beloved, Tatyana, spurned him for Sergei, whom she pledged to marry.",
+                      "In a desperate attempt to win Tatyana's heart, Strahd forged a pact with dark powers that made him immortal. At the wedding of Sergei and Tatyana, he confronted his brother and killed him. Tatyana fled and flung herself from Ravenloft's walls. Strahd's guards, seeing him for a monster, shot him with arrows. But he did not die. He became a vampire-the first vampire, according to many sages.",
+                      "In the centuries since his transformation, Strahd's lust for life and youth have only grown. He broods in his dark castle, cursing the living for stealing away what he lost, and never admitting his hand in the tragedy he created."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "name": "Regional Effects",
+                "entries": [
+                  "The region surrounding a vampire's lair is warped by the creature's unnatural presence, creating any of the following effects:",
+                  {
+                    "type": "list",
+                    "items": [
+                      "There's a noticeable increase in the populations of bats, rats, and wolves in the region.",
+                      "Plants within 500 feet of the lair wither, and their stems and branches become twisted and thorny.",
+                      "Shadows cast within 500 feet of the lair seem abnormally gaunt and sometimes move as though alive.",
+                      "A creeping fog clings to the ground within 500 feet of the vampire's lair. The fog occasionally takes eerie forms, such as grasping claws and writhing serpents."
+                    ]
+                  },
+                  "If the vampire is destroyed, these effects end after {@dice 2d6} days."
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Vampire.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Undead Josh",
+      "source": "Thermodome",
+      "page": 237,
+      "size": ["M"],
+      "type": "undead",
+      "alignment": ["N", "E"],
+      "ac": [
+        {
+          "ac": 15,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "13d8 + 39"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 10,
+      "con": 17,
+      "int": 4,
+      "wis": 6,
+      "cha": 6,
+      "save": {
+        "wis": "+1"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 8,
+      "resist": ["cold", "necrotic"],
+      "immune": ["poison"],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "understands the languages it knew in life but can't speak"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Turn Resistance",
+          "entries": [
+            "The zombie has advantage on saving throws against any effect that turns undead."
+          ]
+        },
+        {
+          "name": "Undead Fortitude",
+          "entries": [
+            "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": ["The zombie makes two melee attacks."]
+        },
+        {
+          "name": "Bone Glaive",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}12 ({@damage 1d8 + 8}) slashing damage, plus 7 ({@damage 2d6}) necrotic damage."
+          ]
+        }
+      ],
+      "traitTags": ["Turn Resistance", "Undead Fortitude"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["CS", "LF"],
+      "damageTags": ["N", "S"],
+      "miscTags": ["MW", "RCH"],
+      "hasFluff": true,
+      "tokenUrl": "https://5e.tools/img/TftYP/Greater Zombie.png",
+      "fluff": {
+        "name": "Greater Zombie",
+        "source": "TftYP",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Many of those who brave the Tomb of Horrors believe they have reached their ultimate destination when they disturb a skeletal figure inside a secluded crypt. It is, in fact, a greater zombie, a creature magically created from a humanoid corpse to be far more resilient than a typical zombie.",
+                  {
+                    "name": "Undead Nature",
+                    "type": "entries",
+                    "entries": [
+                      "A zombie doesn't require air, food, drink, or sleep."
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Goblin Gladiator",
+      "source": "Thermodome",
+      "page": 346,
+      "size": ["S"],
+      "type": {
+        "type": "humanoid",
+        "tags": ["Golbinoid"]
+      },
+      "alignment": ["A"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": [
+            "{@item studded leather armor|phb|studded leather}",
+            "{@item shield|phb}"
+          ]
+        }
+      ],
+      "hp": {
+        "formula": "15d6 + 45",
+        "average": 97
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 20,
+      "dex": 15,
+      "con": 16,
+      "int": 10,
+      "wis": 12,
+      "cha": 15,
+      "save": {
+        "str": "+8",
+        "dex": "+5",
+        "con": "+6"
+      },
+      "skill": {
+        "athletics": "+11",
+        "intimidation": "+5"
+      },
+      "passive": 11,
+      "languages": ["any one language (usually Common)"],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Brave",
+          "entries": [
+            "The gladiator has advantage on saving throws against being {@condition frightened}."
+          ]
+        },
+        {
+          "name": "Brute",
+          "entries": [
+            "A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack)."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The gladiator makes three melee attacks or two ranged attacks."
+          ]
+        },
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atk mw,rw} {@hit 8} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 5}) piercing damage, or 13 ({@damage 2d8 + 5}) piercing damage if used with two hands to make a melee attack."
+          ]
+        },
+        {
+          "name": "Shield Bash",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 5}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+          ]
+        }
+      ],
+      "environment": ["urban"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/gladiator.mp3"
+      },
+      "attachedItems": ["spear|phb"],
+      "traitTags": ["Brute"],
+      "actionTags": ["Multiattack", "Parry"],
+      "languageTags": ["C", "X"],
+      "damageTags": ["B", "P"],
+      "miscTags": ["RW", "MW", "THW"],
+      "conditionInflict": ["prone"],
+      "hasFluff": true,
+      "tokenUrl": "https://5e.tools/img/MM/Gladiator.png",
+      "fluff": {
+        "name": "Gladiator",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Gladiators battle for the entertainment of raucous crowds. Some gladiators are brutal pit fighters who treat each match as a life-or-death struggle, while others are professional duelists who command huge fees but rarely fight to the death."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Increased Threat Cambion",
+      "source": "Thermodome",
+      "page": 36,
+      "size": ["M"],
+      "type": "fiend",
+      "alignment": ["L", "NX", "C", "E"],
+      "ac": [
+        {
+          "ac": 19,
+          "from": ["{@item scale mail|phb}"]
+        }
+      ],
+      "hp": {
+        "formula": "14d8 + 42",
+        "average": 105
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "str": 20,
+      "dex": 18,
+      "con": 16,
+      "int": 14,
+      "wis": 12,
+      "cha": 16,
+      "save": {
+        "str": "+9",
+        "int": "+6",
+        "cha": "+7",
+        "con": "+7"
+      },
+      "skill": {
+        "deception": "+7",
+        "intimidation": "+7",
+        "perception": "+5",
+        "stealth": "+8"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 16,
+      "resist": [
+        "cold",
+        "fire",
+        "lightning",
+        "poison",
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks",
+          "cond": true
+        }
+      ],
+      "languages": ["Abyssal", "Common", "Infernal"],
+      "cr": "7",
+      "spellcasting": [
+        {
+          "name": "Innate Spellcasting",
+          "headerEntries": [
+            "The cambion's spellcasting ability is Charisma (spell save {@dc 16}). The cambion can innately cast the following spells, requiring no material components:"
+          ],
+          "daily": {
+            "1": ["{@spell plane shift} (self only)"],
+            "3e": [
+              "{@spell alter self}",
+              "{@spell command}",
+              "{@spell detect magic}"
+            ]
+          },
+          "ability": "cha"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Fiendish Blessing",
+          "entries": ["The AC of the cambion includes its Charisma bonus."]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cambion makes two melee attacks or uses its Fire Ray twice."
+          ]
+        },
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}9 ({@damage 2d6 + 6}) piercing damage, or 11 ({@damage 2d8 + 6}) piercing damage if used with two hands to make a melee attack, plus 6 ({@damage 2d6}) fire damage."
+          ]
+        },
+        {
+          "name": "Fire Ray",
+          "entries": [
+            "{@atk rs} {@hit 9} to hit, range 120 ft., one target. {@h}14 ({@damage 4d6}) fire damage."
+          ]
+        },
+        {
+          "name": "Fiendish Charm",
+          "entries": [
+            "One humanoid the cambion can see within 30 feet of it must succeed on a {@dc 16} Wisdom saving throw or be magically {@condition charmed} for 1 day. The {@condition charmed} target obeys the cambion's spoken commands. If the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. If a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours."
+          ]
+        }
+      ],
+      "variant": [
+        {
+          "type": "variant",
+          "name": "Demonic Cambions",
+          "entries": [
+            "Few demons consort with mortals, and those with the charm or desire to usually grant their cambion children the Fiendish Charm ability. Cultists of Baphomet and Orcus can also use foul rituals to infuse their master's strength into a young or unborn child, yielding a cult champion who can wield special abilities; a cambion linked to Orcus replaces Fiendish Charm with Spawn of the Grave, and one linked to Baphomet replaces it with Horned One's Call.",
+            {
+              "type": "entries",
+              "name": "Horned One's Call",
+              "entries": [
+                "When the cambion targets only one creature with the attacks of its Multiattack, it can choose one ally it can see within 30 feet. That ally can use its reaction to make one melee attack against a target of its choice."
+              ]
+            },
+            {
+              "type": "entries",
+              "name": "Spawn of the Grave",
+              "entries": [
+                "At the end of each of the cambion's turns, each undead of its choice that it can see within 30 feet gains 10 temporary hit points, provided the cambion isn't {@condition incapacitated}.",
+                "In addition, this cambion can use its Innate Spellcasting ability to cast {@spell animate dead} three times per day."
+              ]
+            }
+          ],
+          "source": "MTF",
+          "page": 32
+        }
+      ],
+      "environment": ["urban"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/cambion.mp3"
+      },
+      "attachedItems": ["spear|phb"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["AB", "C", "I"],
+      "damageTags": ["F", "P"],
+      "damageTagsSpell": ["B", "P", "S"],
+      "spellcastingTags": ["I"],
+      "miscTags": ["RW", "MW", "THW"],
+      "conditionInflict": ["charmed"],
+      "conditionInflictSpell": ["prone"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Cambion.png",
+      "fluff": {
+        "name": "Cambion",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "A cambion is the offspring of a fiend (usually a succubus or incubus) and a humanoid (usually a human). Cambions inherit aspects of both parents, but their horns, leathery wings, and sinewy tails are hallmarks of their otherworldly parentage.",
+                  {
+                    "name": "Born to Be Bad",
+                    "type": "entries",
+                    "entries": [
+                      "Cambions grow into ruthless adults whose wickedness and perversion horrifies even the most devoted mortal parent. Even as a youth, a cambion identifies its rightful place as an overlord of mortals. It might orchestrate uprisings in towns and cities, gathering gangs of humanoids and lesser devils to serve it."
+                    ]
+                  },
+                  {
+                    "name": "Pawns of the Mighty",
+                    "type": "entries",
+                    "entries": [
+                      "A cambion forced to serve its fiendish parent does so out of admiration and dread, but also with the expectation that it will one day rise to a place of prominence. Cambions raised in the Nine Hells serve as soldiers, envoys, and personal attendants to greater devils. In the Abyss, a cambion carries only as much authority as it can muster through sheer strength and force of will."
+                    ]
+                  },
+                  {
+                    "name": "Spawn of Graz'zt",
+                    "type": "entries",
+                    "entries": [
+                      "The demon lord Graz'zt is fond of procreating with humanoids who have made pacts with fiends, and he has sired many cambions who help him sow chaos across the multiverse. These cambions are characterized by charcoal-black skin, cloven hooves, six-fingered hands, and unearthly beauty."
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "insetReadaloud",
+                "entries": [
+                  {
+                    "type": "quote",
+                    "entries": [
+                      "They crawl from their mother's wombs to spread corruption throughout the multiverse. What's not to love?"
+                    ],
+                    "by": "Baba Yaga"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Cambion.jpg"
+            }
+          }
+        ]
+      },
+      "vulnerable": ["radiant"]
+    },
+    {
+      "name": "Tesserdall",
+      "source": "Thermodome",
+      "page": 313,
+      "size": ["M"],
+      "type": "fiend",
+      "alignment": ["L", "E"],
+      "ac": [
+        {
+          "ac": 17,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 104,
+        "formula": "16d8 + 32"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 14,
+      "int": 20,
+      "wis": 16,
+      "cha": 17,
+      "save": {
+        "dex": "+5",
+        "int": "+9",
+        "wis": "+7",
+        "cha": "+9"
+      },
+      "skill": {
+        "arcana": "+13",
+        "deception": "+15",
+        "insight": "+11",
+        "perception": "+7"
+      },
+      "senses": ["truesight 120 ft."],
+      "passive": 17,
+      "resist": [
+        "cold",
+        "fire",
+        "lightning",
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks",
+          "cond": true
+        }
+      ],
+      "immune": ["acid", "poison"],
+      "conditionImmune": ["charmed", "poisoned"],
+      "languages": ["all", "telepathy 120 ft."],
+      "cr": "14",
+      "spellcasting": [
+        {
+          "name": "Innate Spellcasting",
+          "headerEntries": [
+            "The Tesserdall's innate spellcasting ability is Charisma (spell save {@dc 15}). Tesserdall can innately cast the following spells, requiring no material components:"
+          ],
+          "will": [
+            "{@spell darkness}",
+            "{@spell heat metal}",
+            "{@spell invisibility} (self only)",
+            "{@spell magic missile}"
+          ],
+          "ability": "cha",
+          "type": "spellcasting"
+        },
+        {
+          "name": "Spellcasting",
+          "headerEntries": [
+            "Tesserdall's is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). Tesserdall has the following wizard spells prepared:"
+          ],
+          "spells": {
+            "0": {
+              "spells": [
+                "{@spell fire bolt}",
+                "{@spell mage hand}",
+                "{@spell minor illusion}",
+                "{@spell prestidigitation}"
+              ]
+            },
+            "1": {
+              "spells": [
+                "{@spell detect magic}",
+                "{@spell identify}",
+                "{@spell shield}",
+                "{@spell Tenser's floating disk}"
+              ],
+              "slots": 4
+            },
+            "2": {
+              "spells": [
+                "{@spell detect thoughts}",
+                "{@spell mirror image}",
+                "{@spell phantasmal force}",
+                "{@spell suggestion}"
+              ],
+              "slots": 3
+            },
+            "3": {
+              "spells": [
+                "{@spell counterspell}",
+                "{@spell fear}",
+                "{@spell fireball}"
+              ],
+              "slots": 3
+            },
+            "4": {
+              "spells": ["{@spell banishment}", "{@spell dimension door}"],
+              "slots": 3
+            },
+            "5": {
+              "spells": [
+                "{@spell contact other plane}",
+                "{@spell hold monster}"
+              ],
+              "slots": 2
+            },
+            "6": {
+              "spells": ["{@spell chain lightning}"],
+              "slots": 1
+            },
+            "7": {
+              "spells": ["{@spell finger of death}"],
+              "slots": 1
+            },
+            "8": {
+              "spells": ["{@spell mind blank}"],
+              "slots": 1
+            }
+          },
+          "ability": "int",
+          "type": "spellcasting"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Limited Magic Immunity",
+          "entries": [
+            "Tesserdall can't be affected or detected by spells of 3rd level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects."
+          ]
+        },
+        {
+          "name": "Magic Weapons",
+          "entries": ["Tesserdall's weapon attacks are magical."]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claws",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d4 + 3}) slashing damage. The target must make a {@dc 14} Constitution saving throw, taking 10 ({@damage 3d6}) firedamage on a failed save, or half as much damage on a successful one."
+          ]
+        },
+        {
+          "name": "Teleport",
+          "entries": [
+            "The arcanaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+          ]
+        },
+        {
+          "name": "Hurl Flame",
+          "entries": [
+            "{@atk rs} {@hit +9} to hit, range 150 ft., one target. {@h}14 ({@damage 4d6}) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+          ]
+        }
+      ],
+      "variant": [
+        {
+          "type": "variant",
+          "name": "Yugoloth Summoning",
+          "entries": [
+            "Some yugoloths have an action option that allows them to summon other yugoloths.",
+            {
+              "name": "Summon Yugoloth (1/Day)",
+              "type": "entries",
+              "entries": [
+                "The yugoloth attempts a magical summoning.",
+                "An arcanaloth has a {@chance 40|40 percent|40% summoning chance} chance of summoning one arcanaloth.",
+                "A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+              ]
+            }
+          ]
+        }
+      ],
+      "traitTags": ["Magic Resistance", "Magic Weapons"],
+      "senseTags": ["U"],
+      "actionTags": ["Breath Weapon", "Teleport"],
+      "languageTags": ["XX", "TP"],
+      "damageTags": ["F", "S"],
+      "damageTagsSpell": ["F", "L", "N", "O", "Y"],
+      "spellcastingTags": ["I", "CW"],
+      "miscTags": ["MW"],
+      "conditionInflictSpell": [
+        "frightened",
+        "incapacitated",
+        "invisible",
+        "paralyzed"
+      ],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://i.pinimg.com/564x/8e/ae/70/8eae707ba0edc6944724646b073645d8.jpg",
+      "fluff": {
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Arcanaloths are sly, jackal-headed beings with humanoid bodies, but they can employ magic to take any humanoid form. They do so to gain the trust of creatures with whom they negotiate, replacing jackal snarls with winsome smiles. Regardless of its chosen form, an arcanaloth appears well groomed, clothing itself in fine robes. Highly intelligent spellcasters who hunger for knowledge and power, arcanaloths command units of lesser yugoloths and maintain the contracts, records, and accounts of their kind.",
+                  "Arcanaloths speak and write all languages, making them cunning diplomats and negotiators. An arcanaloth properly paid can broker treaties or alliances with subtlety and finesse, just as an arcanaloth who changes sides can easily turn the best-laid peace talks into all-out war. What the fiend demands in exchange for its time and talent is information, as well as powerful magic items that it can trade for even more information."
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "name": "Yugoloths",
+            "entries": [
+              "Yugoloths are fickle fiends that inhabit the planes of Acheron, Gehenna, Hades, and Carceri. They act as mercenaries and are notorious for their shifting loyalties. They are the embodiments of avarice. Before serving under anyone's banner, a yugoloth asks the only question on its mind: {@i What's in it for me?}",
+              {
+                "type": "entries",
+                "entries": [
+                  {
+                    "type": "entries",
+                    "entries": [
+                      {
+                        "type": "entries",
+                        "name": "Spawn of Gehenna",
+                        "entries": [
+                          "The first yugoloths were created by a sisterhood of night hags on Gehenna. It is widely believed that Asmodeus, Lord of the Nine Hells, commissioned the work, in the hope of creating an army of fiends that were not bound to the Nine Hells. In the course of making this new army, the hags crafted four magic tomes and recorded the true names of every yugoloth they created, save one, the General of Gehenna. These tomes were called the Books of Keeping. Since knowing a fiend's true name grants power over it, the hags used the books to ensure the yugoloths' loyalty. They also used the books to capture the true names of other fiends that crossed them. It is rumored that the Books of Keeping contain the true names of a few demon lords and archdevils as well.",
+                          "Petty jealousies and endless bickering caused the sisterhood to dissolve, and in the ensuing power grab, the Books of Keeping were lost or stolen. No longer indentured to anyone, the yugoloths gained independence, and they now offer their services to the highest bidder."
+                        ]
+                      },
+                      {
+                        "type": "entries",
+                        "name": "Fiendish Mercenaries",
+                        "entries": [
+                          "Summoned yugoloths demand much for their time and loyalty. Whatever promises a yugoloth makes are quickly broken when a better opportunity presents itself. Unlike demons, yugoloths can be reasoned with, but unlike devils, they are rarely true to their word.",
+                          "Yugoloths can be found anywhere, but the high cost of maintaining a yugoloth army's loyalty typically exceeds what any warlord on the Material Plane can pay. Being self-serving creatures, yugoloths quarrel among themselves constantly. A yugoloth army is more organized than a ravening horde of demons, but far less orderly and regimented than a legion of devils. Without a powerful leader to keep them in line, yugoloths fight simply to indulge their violent predilections, and only as long as it benefits them to do so."
+                        ]
+                      },
+                      {
+                        "type": "entries",
+                        "name": "Back to Gehenna",
+                        "entries": [
+                          "When a yugoloth dies, it dissolves into a pool of ichor and reforms at full strength on the Bleak Eternity of Gehenna. Only on its native plane can a yugoloth be destroyed permanently. A yugoloth knows this and acts accordingly. When summoned to other planes, a yugoloth fights without concern for its own well-being. On Gehenna, it is more apt to retreat or plead for mercy if its demise seems imminent.",
+                          "When a yugoloth is permanently destroyed, its name vanishes from every Book of Keeping. If a yugoloth is re-created by way of an unholy ritual requiring the expenditure of souls, its name reappears in the books."
+                        ]
+                      },
+                      {
+                        "type": "entries",
+                        "name": "The Books of Keeping",
+                        "entries": [
+                          "When all four copies of the Books of Keeping disappeared, Asmodeus and the night hags lost control of their yugoloth creations. Each Book of Keeping still exists, drifting from plane to plane, where the brave and the foolish occasionally stumble upon them. A yugoloth summoned using its true name, as inscribed in the Books of Keeping, is forced to serve its summoner obediently. The yugoloth hates being controlled in this manner and isn't shy about making its displeasure known. Like a petulant child, it will follow its instructions to the letter while looking for opportunities to misinterpret them."
+                        ]
+                      },
+                      {
+                        "type": "entries",
+                        "name": "The General of Gehenna",
+                        "entries": [
+                          "Somewhere in the brimstone wastes of Gehenna, there roams an ultroloth so strong that none contests his power: the General of Gehenna. Many yugoloths search for this great general in the hope of serving with him. They believe that service with the General of Gehenna grants power and prestige among lower planar entities.",
+                          "Whatever the case, no fiend finds the General unless the General desires it. His personal name is unknown, and even the Books of Keeping contain no mention of this powerful, thoroughly evil entity."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "inset",
+                "name": "Variant: Yugoloth Summoning",
+                "entries": [
+                  "Some yugoloths can have an action option that allows them to summon other yugoloths.",
+                  {
+                    "type": "entries",
+                    "name": "Summon Yugoloth (1/Day)",
+                    "entries": [
+                      "The yugoloth chooses what to summon and attempts a magical summoning.",
+                      {
+                        "type": "list",
+                        "items": [
+                          "An arcanaloth has a {@chance 40} chance of summoning one arcanaloth.",
+                          "A mezzoloth has a {@chance 30} chance of summoning one mezzoloth.",
+                          "A nycaloth has a {@chance 50} chance of summoning {@dice 1d4} mezzoloths or one nycaloth.",
+                          "An ultroloth has a {@chance 50} chance of summoning {@dice 1d6} mezzoloths, {@dice 1d4} nycaloths, or one ultroloth."
+                        ]
+                      },
+                      "A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases (unless its summoner is an ultroloth, in which case it acts as an ally of its summoner), and can't summon other yugoloths. The summoned yugoloth remains for l minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "insetReadaloud",
+                "entries": [
+                  {
+                    "type": "quote",
+                    "entries": [
+                      "Power. We all crave it, but only a select few of us deserve it."
+                    ],
+                    "by": "Shemeshka the Marauder",
+                    "from": "arcanaloth in Sigil"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "external",
+              "url": "https://i.pinimg.com/564x/8e/ae/70/8eae707ba0edc6944724646b073645d8.jpg"
+            }
+          }
+        ]
+      },
+      "isNamedCreature": true,
+      "legendary": [
+        {
+          "name": "Teleport",
+          "entries": ["Tesserdall uses Teleport."]
+        },
+        {
+          "name": "Cast a Spell (Costs 2 Actions)",
+          "entries": ["Tesserdall casts one of his innate spells."]
+        },
+        {
+          "name": "Attack",
+          "entries": ["Tesserdall makes a claw attack, or Hurls flames"]
+        }
+      ]
+    },
+    {
+      "name": "Adamus",
+      "size": ["M"],
+      "type": "undead",
+      "source": "Thermodome",
+      "alignment": ["E"],
+      "ac": [
+        {
+          "ac": 18,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "formula": "20d8 + 80",
+        "average": 170
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 20,
+      "dex": 16,
+      "con": 18,
+      "int": 15,
+      "wis": 17,
+      "cha": 20,
+      "passive": 18,
+      "cr": "15",
+      "senses": ["Darkvision 120ft."],
+      "senseTags": ["D"],
+      "languages": ["Common", "Infernal"],
+      "languageTags": ["C", "I"],
+      "save": {
+        "str": "+10",
+        "con": "+9",
+        "wis": "+8",
+        "cha": "+10"
+      },
+      "skill": {
+        "athletics": "+10",
+        "insight": "+8",
+        "perception": "+8",
+        "intimidation": "+10"
+      },
+      "vulnerable": ["radiant"],
+      "resist": [
+        {
+          "resist": ["necrotic"]
+        },
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from Nonmagical Attacks",
+          "cond": true
+        }
+      ],
+      "conditionImmune": ["frightened"],
+      "trait": [
+        {
+          "name": "Misty Escape",
+          "entries": [
+            "When it drops to 0 hit points outside its resting place, Adamus transforms into a cloud of mist (as in the Shapechanger trait) instead of falling {@condition unconscious}, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.",
+            "While it has 0 hit points in mist form, it can't revert to its the adamus form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its the adamus form. It is then {@condition paralyzed} until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point."
+          ]
+        },
+        {
+          "name": "Regeneration",
+          "entries": [
+            "Adamus regains 30 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the adamus takes radiant damage or damage from holy water, this trait doesn't function at the start of Adamus's next turn."
+          ]
+        },
+        {
+          "name": "Limited Magic Immunity",
+          "entries": [
+            "Adamus can't be affected or detected by spells of 4th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects."
+          ]
+        }
+      ],
+      "traitTags": ["Regeneration"],
+      "isNamedCreature": true,
+      "actionHeader": ["Multiattack. Adamus makes three Spear Attacks."],
+      "action": [
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atk mw,rw} {@hit +10} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}8 ({@damage 2d6 + 5}) piercing damage, plus {@h}8 ({@damage 2d6}) fire damage"
+          ]
+        },
+        {
+          "name": "Mind-Breaking Howl {@recharge 4}",
+          "entries": [
+            "Adamus emits a keening howl in a 60-foot cone. Each creature in that area must succeed on a {@dc 16} Wisdom saving throw or take {@h}20 ({@damage 4d10})) psychic damage and be {@condition frightened} until the end of Adamus' next turn. While a creature is {@condition frightened} in this way, its speed is halved, and it is {@condition incapacitated}. A target that successfully saves is immune to the Mind-Breaking Howl for the next 24 hours."
+          ]
+        },
+        {
+          "name": "Fire Lance{@recharge 5}",
+          "entries": [
+            "Adamus looses a spear of fire in a line that is 60 feet long and 10 feet wide. Each creature in the line must make a {@dc 15} Dexterity saving throw, taking {@h}36 ({@damage 8d8}))  fire damage on a failed save, or half as much damage on a successful one"
+          ]
+        }
+      ],
+      "damageTags": ["F", "P"],
+      "miscTags": ["RW", "MW", "THW", "AOE"],
+      "conditionInflict": ["frightened"],
+      "legendary": [
+        {
+          "name": "Attack",
+          "entries": ["Adamus makes one weapon attack"]
+        },
+        {
+          "name": "Shielded Move",
+          "entries": [
+            "Adamus moves up to his movement, provoking oppurtunity attacks in the movement but raising his AC to 21 during this movement"
+          ]
+        }
+      ],
+      "tokenUrl": "https://drive.google.com/open?id=1CSG1DtoCJBlG_Mn44hmCx8e0XaMdAvlU&usp=drive_fs"
+    },
+    {
+      "name": "Greater Grappler Zombie",
+      "source": "Thermodome",
+      "page": 237,
+      "size": ["M"],
+      "type": "undead",
+      "alignment": ["N", "E"],
+      "ac": [
+        {
+          "ac": 15,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "13d8 + 39"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 10,
+      "con": 17,
+      "int": 4,
+      "wis": 6,
+      "cha": 6,
+      "save": {
+        "wis": "+1"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 8,
+      "resist": ["cold", "necrotic"],
+      "immune": ["poison"],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "understands the languages it knew in life but can't speak"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Turn Resistance",
+          "entries": [
+            "The zombie has advantage on saving throws against any effect that turns undead."
+          ]
+        },
+        {
+          "name": "Undead Fortitude",
+          "entries": [
+            "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": ["The zombie makes two melee attacks."]
+        },
+        {
+          "name": "Empowered Slam",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) bludgeoning damage and 7 ({@damage 2d6}) necrotic damage."
+          ]
+        },
+        {
+          "name": "Grappling Tendrils",
+          "entries": [
+            "{@atk rw} {@hit 3} to hit, range 30/60 ft., one target. {@h}7 ({@damage 1d6 + 4}) bludgeoning damage, plus 7 ({@damage 2d6}) necrotic damage. Instead of dealing damage, the Zombie can grapple the target (escape {@dc 18}), the target must then make a {@dc 16} Athletics check or be pulled 10ft. towards the Zombie"
+          ]
+        }
+      ],
+      "traitTags": ["Turn Resistance", "Undead Fortitude"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["CS", "LF"],
+      "damageTags": ["B", "N"],
+      "miscTags": ["MW", "RW"],
+      "hasFluff": true,
+      "tokenUrl": "https://5e.tools/img/TftYP/Greater Zombie.png",
+      "fluff": {
+        "name": "Greater Zombie",
+        "source": "TftYP",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Many of those who brave the Tomb of Horrors believe they have reached their ultimate destination when they disturb a skeletal figure inside a secluded crypt. It is, in fact, a greater zombie, a creature magically created from a humanoid corpse to be far more resilient than a typical zombie.",
+                  {
+                    "name": "Undead Nature",
+                    "type": "entries",
+                    "entries": [
+                      "A zombie doesn't require air, food, drink, or sleep."
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Orc Shock Trooper",
+      "source": "Thermodome",
+      "page": 25,
+      "size": ["M"],
+      "type": "humanoid",
+      "alignment": ["A"],
+      "ac": [
+        {
+          "ac": 18,
+          "from": ["{@item plate armor|PHB|plate}"]
+        }
+      ],
+      "hp": {
+        "average": 93,
+        "formula": "11d8 + 44"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 20,
+      "dex": 14,
+      "con": 18,
+      "int": 11,
+      "wis": 12,
+      "cha": 13,
+      "save": {
+        "str": "+8",
+        "con": "+7",
+        "wis": "+4"
+      },
+      "skill": {
+        "athletics": "+8",
+        "intimidation": "+7",
+        "perception": "+4"
+      },
+      "passive": 14,
+      "languages": ["Common"],
+      "cr": "6",
+      "trait": [
+        {
+          "name": "Headfirst Charge",
+          "entries": [
+            "If the Orc moves at least 20 feet in a straight line and ends within 5 feet of a Large or smaller creature, that creature must succeed on a {@dc 16} Strength saving throw or take 7 ({@damage 2d6}) bludgeoning damage and be knocked {@condition prone}."
+          ]
+        },
+        {
+          "name": "Siege Monster",
+          "entries": ["The Orc deals double damage to objects and structures."]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": ["The Orc makes two Greatsword attacks."]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) slashing damage."
+          ]
+        },
+        {
+          "name": "Thunder Bomb",
+          "entries": [
+            "The giff lights a grapefruit-sized bomb and throws it at a point up to 60 feet away, where it explodes. Each creature within a 10-foot-radius sphere centered on that point must make a {@dc 15} Dexterity saving throw, taking 18 ({@damage 4d8}) thunder damage on a failed save, or half as much damage on a successful one. After the giff throws the bomb, roll a {@dice d6}; on a roll of 4 or lower, the giff has no more bombs to throw."
+          ]
+        }
+      ],
+      "traitTags": ["Siege Monster"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["C"],
+      "damageTags": ["B", "S", "T"],
+      "miscTags": ["MW", "AOE"],
+      "conditionInflict": ["prone"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://i.pinimg.com/564x/0a/27/f0/0a27f0e589ac5c688281d940f9de5ea8.jpg",
+      "fluff": {
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              "A giff shock trooper is trained to mount assaults on enemy strongholds. Each one is adept at softening up the enemy from a distance with firearms before charging into melee to mop up the foes that remain standing."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "external",
+              "url": "https://i.pinimg.com/564x/0a/27/f0/0a27f0e589ac5c688281d940f9de5ea8.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Steward",
+      "source": "Thermodome",
+      "page": 186,
+      "size": ["M"],
+      "type": {
+        "type": "humanoid",
+        "tags": ["human"]
+      },
+      "alignment": ["L", "G"],
+      "ac": [
+        {
+          "ac": 17,
+          "from": ["{@item half plate armor|phb}"]
+        }
+      ],
+      "hp": {
+        "average": 39,
+        "formula": "6d8 + 12"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 14,
+      "int": 18,
+      "wis": 12,
+      "cha": 20,
+      "senses": ["darkvision 60 ft."],
+      "passive": 13,
+      "languages": ["Common", "Goblin"],
+      "cr": "3",
+      "action": [
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) slashing damage."
+          ]
+        },
+        {
+          "name": "Leadership (Recharges after a Short or Long Rest)",
+          "entries": [
+            "For 1 minute, the hobgoblin can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a {@dice d4} to its roll provided it can hear and understand the hobgoblin. A creature can benefit from only one Leadership die at a time. This effect ends if the hobgoblin is {@condition incapacitated}."
+          ]
+        }
+      ],
+      "environment": ["desert", "forest", "grassland", "hill", "underdark"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/hobgoblin-captain.mp3"
+      },
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["C", "GO"],
+      "damageTags": ["S"],
+      "miscTags": ["MW"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://i.imgur.com/KNMRX5o.png",
+      "fluff": {
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "War horns sound, stones fly from catapults, and the thunder of a thousand booted feet echoes across the land as hobgoblins march to battle. Across the borderlands of civilization, settlements and settlers must contend with these aggressive humanoids, whose thirst for conquest is never satisfied.",
+                  "Hobgoblins have dark orange or red-orange skin, and hair ranging from dark red-brown to dark gray. Yellow or dark brown eyes peer out beneath their beetling brows, and their wide mouths sport sharp and yellowed teeth. A male hobgoblin might have a large blue or red nose, which symbolizes virility and power among goblinkin. Hobgoblins can live as long as humans, though their love of warfare and battle means that few do.",
+                  {
+                    "name": "Goblinoids",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins belong to a family of creatures called goblinoids. They are often found lording over their cousins, the smaller goblins and the ferocious bugbears."
+                    ]
+                  },
+                  {
+                    "name": "Martial Might",
+                    "type": "entries",
+                    "entries": [
+                      "A hobgoblin measures virtue by physical strength and martial prowess, caring about nothing except the opportunity to demonstrate skill and cunning in battle. Hobgoblins of high military rank attain their positions by force, then hold those positions by imposing their authority through draconian measures.",
+                      "Hobgoblins train to fight with a variety of weapons, and have great skill at crafting arms, armor, siege engines, and other military devices. Organized and disciplined, they take exceptional care of their weapons, armor, and personal possessions. They favor the bold colors associated with their tribes, and trim their often-elaborate uniforms with blood-red piping and leather dyed black."
+                    ]
+                  },
+                  {
+                    "name": "Military Legions",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins organize themselves into tribal bands known as legions. In their martial society, every hobgoblin has a rank, from the powerful leaders and champions, to the rank-and-file foot soldiers, to the goblins that find themselves driven into the front lines at spear point. A legion is headed by a warlord with several captains serving under its command. A hobgoblin warlord is a ruthless tyrant more interested in strategy, victory, glory, reputation, and dominion than leading troops into battle.",
+                      "As loyal and disciplined as hobgoblins are in their own legion, rival legions compete constantly for reputation and status. Meetings between legions erupt in violence if troops aren't restrained, and only exceptionally powerful leaders can force legions to cooperate on the battlefield."
+                    ]
+                  },
+                  {
+                    "name": "Strategic Thinkers",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins have a strong grasp of tactics and discipline, and can carry out sophisticated battle plans under the direction of a strategically minded leader. However, they hate elves and attack them first in battle over any other opponents, even if doing so would be a tactical error.",
+                      "Legions often supplement their ranks with less reliable and more expendable troops, including goblins, bugbears, orcs, evil humans, ogres, and giants."
+                    ]
+                  },
+                  {
+                    "name": "Beast Trainers",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins have a long history of training animals to service. Like the more civilized races, they use oxen and horses to transport goods and weaponry over long distances. They communicate with each other using trained ravens, and keep vicious wolves to guard prisoners and protect hobgoblin camps. Hobgoblin cavalry use trained worgs as steeds, in the same way that goblins ride wolves. Some tribes even keep carnivorous apes as fighting beasts."
+                    ]
+                  },
+                  {
+                    "name": "Conquer and Control",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins claim lands with abundant resources, and they can be found in forests and mountains, near mines and humanoid settlements, and anywhere else that wood, metal, and potential slaves can be found. They build and conquer strongholds in strategically advantageous locations, which they then use as staging areas to expand their territory.",
+                      "Hobgoblin warlords never tire of combat, but they don't take up arms lightly. Before they attack, hobgoblins conduct thorough reconnaissance to gauge the strengths and weaknesses of their foes. When assaulting a stronghold, they surround it first to cut off escape routes and supply lines, then slowly starve their enemies out.",
+                      "Hobgoblins fortify their own holdings, bolstering existing defenses with innovations of their own. Whether they lair in cavern complexes, dungeons, ruins, or forests, they protect their strongholds with ditches, fences, gates, guard towers, pit traps, and crude catapults or ballistas."
+                    ]
+                  },
+                  {
+                    "name": "Legion of Maglubiyet",
+                    "type": "entries",
+                    "entries": [
+                      "Hobgoblins worship Maglubiyet the Mighty One, the greater god of goblinoids. As terrifying as this figure is, hobgoblins don't fear death, believing that when they die in battle, their spirits join the honored ranks of Maglubiyet's army on the plane of Acheron."
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "insetReadaloud",
+                "entries": [
+                  {
+                    "type": "quote",
+                    "entries": [
+                      "They break before our shields,",
+                      "They fall beneath our blades;",
+                      "Their home is ours to conquer,",
+                      "Their children our slaves.",
+                      "Acheron! Acheron!",
+                      "Victory is ours!"
+                    ],
+                    "by": "Translation of a Hobgoblin War Chant"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "external",
+              "url": "https://i.pinimg.com/564x/62/bb/3d/62bb3dad3f20d05063a8228df4f40c4d.jpg"
+            }
+          }
+        ]
+      },
+      "skill": {
+        "persuasion": "+9",
+        "performance": "+9",
+        "perception": "+3"
+      }
+    },
+    {
+      "name": "Ygra Mordtooth",
+      "source": "Thermodome",
+      "page": 71,
+      "type": {
+        "type": "fiend",
+        "tags": ["orc"]
+      },
+      "immune": ["fire", "poison"],
+      "languages": ["Common", "Orc"],
+      "size": ["M"],
+      "alignment": ["N"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": ["{@item chain mail|phb}"]
+        }
+      ],
+      "hp": {
+        "formula": "18d10 + 72",
+        "average": 171
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 24,
+      "dex": 14,
+      "con": 18,
+      "int": 11,
+      "wis": 16,
+      "cha": 10,
+      "save": {
+        "str": "+12",
+        "con": "+9",
+        "wis": "+2"
+      },
+      "skill": {
+        "intimidation": "+5",
+        "athletics": "+12",
+        "perception": "+8"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 18,
+      "cr": "14",
+      "trait": [
+        {
+          "name": "Aggressive",
+          "entries": [
+            "As a bonus action, Ygra can move up to its speed toward a hostile creature that it can see."
+          ]
+        },
+        {
+          "name": "Gruumsh's Fury",
+          "entries": [
+            "Ygra deals an extra 8 ({@dice 2d8}) damage when it hits with a weapon attack (included in the attacks)."
+          ]
+        },
+        {
+          "name": "Legendary Resistance (3/Day)",
+          "entries": [
+            "If Ygra fails a saving throw, it can choose to succeed instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": ["The orc makes three attacks"]
+        },
+        {
+          "name": "Greataxe",
+          "entries": [
+            "{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}15 ({@damage 1d12 + 6} plus {@damage 2d8}) Fire damage."
+          ]
+        },
+        {
+          "name": "Battle Cry (1/Day)",
+          "entries": [
+            "Each creature of the war chief's choice that is within 30 feet of it, can hear it, and not already affected by Battle Cry gain advantage on attack rolls until the start of the war chief's next turn. The war chief can then make one attack as a bonus action."
+          ]
+        }
+      ],
+      "traitTags": ["Aggressive", "Legendary Resistances"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["C", "O"],
+      "damageTags": ["A"],
+      "miscTags": ["MW", "AOE"],
+      "tokenUrl": "https://www.dndbeyond.com/avatars/28561/938/637978154109329382.png",
+      "legendary": [
+        {
+          "name": "Attack",
+          "entries": ["Ygra makes one attack."]
+        },
+        {
+          "name": "Telegraphed fire slam",
+          "entries": [
+            "Ygra envelops her axe in flames charging up an attack consuming one legendary action that will hit in a 15 x 10ft area in front of her dealing {@damage 6d12} fire damage to any creatures still in the area when the axe comes down"
+          ]
+        },
+        {
+          "name": "Acid Breath {@recharge}",
+          "entries": [
+            "Ygra uses 3 Legendary actions to temporarily gain the draconic ability of Acid Breath and exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a {@dc 18} Dexterity saving throw, taking 54 ({@damage 12d8}) acid damage on a failed save, or half as much damage on a successful one."
+          ]
+        }
+      ],
+      "isNamedCreature": true,
+      "dragonCastingColor": "black",
+      "fluff": {
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "external",
+              "url": "https://www.dndbeyond.com/avatars/28561/939/637978154110849297.jpeg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Great Orc Commander",
+      "source": "Thermodome",
+      "size": ["M"],
+      "type": {
+        "type": "humanoid",
+        "tags": ["Orc"]
+      },
+      "alignment": ["C", "E"],
+      "alignmentPrefix": "Typically ",
+      "ac": [
+        {
+          "ac": 15,
+          "from": ["natural armor"]
+        }
+      ],
+      "hp": {
+        "average": 172,
+        "formula": "15d12 + 75"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 22,
+      "dex": 15,
+      "con": 21,
+      "int": 9,
+      "wis": 11,
+      "cha": 5,
+      "save": {
+        "wis": "+5",
+        "cha": "+2"
+      },
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": ["darkvision 60 ft."],
+      "passive": 15,
+      "resist": [
+        {
+          "resist": ["bludgeoning", "piercing", "slashing"],
+          "note": "from nonmagical attacks",
+          "cond": true
+        }
+      ],
+      "conditionImmune": ["frightened", "poisoned"],
+      "languages": ["Orc", "Common"],
+      "cr": "13",
+      "trait": [
+        {
+          "name": "Regeneration",
+          "entries": [
+            "The Orc regains 10 hit points at the start of its turn. If the Orc takes acid or fire damage, it regains only 5 hit points at the start of its next turn. The Orc dies only if it is hit by an attack that deals 10 or more acid or fire damage while the Orc has 0 hit points."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The Orc makes one Bite attack and four Longsword attacks."
+          ]
+        },
+        {
+          "name": "Black Claw",
+          "entries": [
+            "{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) piercing damage plus 5 ({@damage 1d10}) poison damage."
+          ]
+        },
+        {
+          "name": "Longsword",
+          "entries": [
+            "{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}16 ({@damage 3d6 + 6}) slashing damage."
+          ]
+        },
+        {
+          "name": "Whirlwind of Blades {@recharge 5}",
+          "entries": [
+            "Each creature within 10 feet of the Orc must make a {@dc 19} Dexterity saving throw, taking 44 ({@damage 8d10}) slashing damage on a failed save, or half as much damage on a successful one."
+          ]
+        }
+      ],
+      "environment": ["arctic", "forest", "hill", "mountain", "underdark"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/dire-troll.mp3"
+      },
+      "traitTags": ["Regeneration"],
+      "senseTags": ["D"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["O", "C"],
+      "damageTags": ["I", "P", "S"],
+      "miscTags": ["MW", "AOE"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://i.imgur.com/Bce7ygQ.png",
+      "fluff": {
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "external",
+              "url": "https://i.pinimg.com/564x/b4/50/9c/b4509cbbb8283fff6be8e2da57ef4e6f.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bill Watkins",
+      "source": "Thermodome",
+      "page": 343,
+      "size": ["M"],
+      "type": {
+        "type": "humanoid",
+        "tags": ["any race"]
+      },
+      "alignment": ["L", "NX", "C", "NY", "E"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": ["{@item studded leather armor|phb|studded leather}"],
+          "braces": true
+        }
+      ],
+      "hp": {
+        "formula": "18d8 + 36",
+        "average": 117
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 20,
+      "con": 14,
+      "int": 18,
+      "wis": 11,
+      "cha": 10,
+      "save": {
+        "dex": "+9",
+        "int": "+8"
+      },
+      "skill": {
+        "acrobatics": "+13",
+        "deception": "+8",
+        "perception": "+8",
+        "stealth": "+13"
+      },
+      "passive": 18,
+      "resist": ["poison"],
+      "languages": ["Thieves' cant plus any two languages"],
+      "cr": "12",
+      "trait": [
+        {
+          "name": "Assassinate",
+          "entries": [
+            "During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a {@quickref Surprise|PHB|3|0|surprised} creature is a critical hit."
+          ]
+        },
+        {
+          "name": "Evasion",
+          "entries": [
+            "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+          ]
+        },
+        {
+          "name": "Sneak Attack (1/Turn)",
+          "entries": [
+            "The assassin deals an extra 14 ({@dice 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": ["The assassin makes two shortsword attacks."]
+        },
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 2d6 + 3}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 24 ({@damage 7d6}) poison damage on a failed save, or half as much damage on a successful one."
+          ]
+        },
+        {
+          "name": "Light Crossbow",
+          "entries": [
+            "{@atk rw} {@hit 6} to hit, range 80/320 ft., one target. {@h}7 ({@damage 2d8 + 3}) piercing damage, and the target must make a {@dc 15} Constitution saving throw, taking 24 ({@damage 7d6}) poison damage on a failed save, or half as much damage on a successful one."
+          ]
+        }
+      ],
+      "environment": ["urban"],
+      "soundClip": {
+        "type": "external",
+        "url": "https://5e.tools/audio/bestiary/assassin.mp3"
+      },
+      "traitTags": ["Sneak Attack"],
+      "actionTags": ["Multiattack"],
+      "languageTags": ["X", "TC"],
+      "damageTags": ["I", "P"],
+      "miscTags": ["MW", "RW", "RNG"],
+      "hasFluff": true,
+      "hasFluffImages": true,
+      "tokenUrl": "https://5e.tools/img/MM/Assassin.png",
+      "fluff": {
+        "name": "Assassin",
+        "source": "MM",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "entries": [
+                  "Trained in the use of poison, assassins are remorseless killers who work for nobles, guildmasters, sovereigns, and anyone else who can afford them."
+                ]
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "type": "image",
+            "href": {
+              "type": "internal",
+              "path": "bestiary/MM/Assassin.webp"
+            }
+          }
+        ]
+      },
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "headerEntries": [
+            "Bill's spellcasting ability is Intelligence(spell save {@dc 14}). Bill can innately cast the following spells, requiring no material components:"
+          ],
+          "rest": {
+            "2": [
+              "{@spell dimension door}",
+              "{@spell invisibility}",
+              "{@spell slow}"
+            ]
+          },
+          "ability": "int",
+          "type": "spellcasting"
+        }
+      ],
+      "spellcastingTags": ["O"],
+      "damageTagsSpell": ["O"]
+    }
+  ]
+}
